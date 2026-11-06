@@ -72,7 +72,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                webView.loadUrl(getCustomCssScript());
+
+                // Only apply custom dark mode scripts when outside the login flow
+                if (url != null && !url.contains("/login/")) {
+                    webView.loadUrl(getCustomCssScript());
+                }
 
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {
                     loadingLayout.setVisibility(View.GONE);
