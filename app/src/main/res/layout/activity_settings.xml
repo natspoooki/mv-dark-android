@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical">
+
+    <!-- Top Toolbar with Camera Notch Insets -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#181818"
+        android:elevation="4dp" />
+
+    <!-- Instruction Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1c1c1c"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tap any element below to pick its color:"
+            android:textColor="#e0e0e0"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Save"
+            android:textSize="12sp"
+            android:backgroundTint="#1a73e8"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <!-- LIVE FROZEN WEBVIEW PREVIEW -->
+    <WebView
+        android:id="@+id/preview_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Action Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#181818"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Reset Defaults"
+            android:textSize="12sp"
+            android:backgroundTint="#2d2d2d"
+            android:textColor="#e0e0e0" />
+    </LinearLayout>
+
+</LinearLayout>

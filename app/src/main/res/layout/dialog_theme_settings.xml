@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1e1e1e"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customize Dark Theme"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Theme Options -->
+    <RadioGroup
+        android:id="@+id/theme_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_charcoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Classic Charcoal"
+            android:textColor="#e0e0e0" />
+
+        <RadioButton
+            android:id="@+id/radio_amoled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AMOLED Black (Pure)"
+            android:textColor="#e0e0e0" />
+
+        <RadioButton
+            android:id="@+id/radio_midnight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Midnight Blue"
+            android:textColor="#e0e0e0" />
+    </RadioGroup>
+
+    <!-- Live Preview Box -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live Preview:"
+        android:textColor="#b0b0b0"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#121212">
+
+        <!-- Mock Navbar -->
+        <TextView
+            android:id="@+id/preview_navbar"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="Mediación Virtual Navbar"
+            android:textColor="#e0e0e0"
+            android:textSize="12sp"
+            android:background="#181818"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Mock Content Card -->
+        <LinearLayout
+            android:id="@+id/preview_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="#1e1e1e">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course &amp; Assignment Box"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/preview_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample Assignment Link"
+                android:textColor="#8ab4f8"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
